@@ -1,0 +1,1 @@
+Rady jsou součástí celého testu verze 2. Otevřete nadřazený index.html. Na konci rad lze přejít na úvod nebo spustit test. Podrobnosti jsou v nadřazeném README.md.

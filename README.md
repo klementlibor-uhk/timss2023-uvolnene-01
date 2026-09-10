@@ -1,32 +1,36 @@
-# TIMSS 2023 – Matematika ME2
+# Matematický test – verze 2
 
-Cvičný online test s 11 uvolněnými úlohami podle dodané předlohy MAT_Test1_ME2.pdf. Maximum je 12 bodů. Slovní hodnocení je motivační stupnice této aplikace, nikoli oficiální stupnice TIMSS.
+Celý balíček: úvodní stránka, schválené rady a 11 matematických úloh. Maximum 12 bodů. Bez přihlašování a bez shromažďování výsledků.
 
-## Zveřejnění na GitHub Pages
+## Jak nahrát aktualizaci na GitHub
 
-1. Otevřete repozitář `klementlibor-uhk/timss2023-uvolnene-01`.
-2. Zvolte **Add file → Upload files**.
-3. Nahrajte obsah rozbaleného balíčku: soubory `index.html`, `style.css`, `app.js`, `scoring.js`, `README.md` a celou složku `assets`. Soubor `index.html` musí být v kořeni repozitáře, nikoli v další podsložce. Nenahrávejte samotný ZIP.
-4. Dole klikněte na **Commit changes**.
-5. Otevřete **Settings → Pages**. U Source vyberte **Deploy from a branch**, větev **main**, složku **/(root)** a **Save**.
-6. Po dokončení publikování bude test na https://klementlibor-uhk.github.io/timss2023-uvolnene-01/ . Stav publikování najdete také na kartě Actions.
+1. Rozbalte ZIP. Otevřete repozitář `klementlibor-uhk/timss2023-uvolnene-01`.
+2. Přes **Add file → Upload files** nahrajte celý obsah rozbaleného balíčku, včetně složek `assets` a `rady`, do hlavní složky repozitáře. Hlavní `index.html` se nahradí novou úvodní stránkou. Nenahrávejte ZIP ani nadřazenou složku `test-v2`.
+3. Potvrďte **Commit changes** a počkejte na dokončení GitHub Pages (zelená fajfka na kartě Actions).
+4. Otevřete https://klementlibor-uhk.github.io/timss2023-uvolnene-01/ a obnovte stránku pomocí Ctrl+F5.
 
-## Použití
+Nastavení Pages může zůstat **Deploy from a branch → main → /(root)**. Staré nepoužívané `app.js` a `style.css` můžete ponechat; nové stránky je nenačítají. Originální ZIP verze 1 si uchovejte pro případ návratu. Aktualizace nahrazuje hlavní `index.html` a `scoring.js`.
 
-Test lze spustit i otevřením `index.html` z rozbalené složky. Nepotřebuje instalaci ani sestavení. Při přecházení šipkami se odpovědi zachovají. Obnovení nebo zavření stránky pokus vymaže. Časomíra nemá časový limit. Výsledky se nikam neodesílají.
+## Spuštění bez GitHubu
 
-U šneků přetáhněte S a T na požadované body. Alternativně vyberte písmeno a klikněte na bod; podporována je také klávesnice (Tab a Enter). Přesun se vyhodnotí až při odevzdání.
+Otevřete rozbalený `index.html` ve webovém prohlížeči. Vše funguje jako statické soubory, bez instalace či sestavování.
 
-Před odevzdáním se zobrazí potvrzení a počet nedokončených úloh. Poté se zobrazí body, procenta, slovní hodnocení a možnost prohlédnout odpovědi, vytisknout výsledek nebo začít nový pokus. Výsledek ani správné odpovědi nelze v režimu prohlížení měnit.
+## Funkce a pravidla
 
-Číselné odpovědi podporují desetinnou čárku a tečku, mezery v tisících a zlomky včetně smíšeného zápisu `1 1/4`.
+- Úvodní stránka obsahuje název publikace, zdroj, tlačítko Spustit test a Rady pro vyplnění testu.
+- Na konci rad jsou volby Projít rady znovu, Zpět na úvodní stránku a Spustit test.
+- Čas se měří až po otevření samotného testu. Úvod a rady se nezapočítávají. Během testu se počítá i doba v jiné záložce. Při odevzdání se čas zastaví a zobrazí ve výsledku v minutách a sekundách.
+- Žák může novou otázku otevřít jen bezprostředně následující šipkou. Vyplnění není podmínkou. Mezi již otevřenými otázkami se pohybuje libovolně pomocí koleček vlevo. Barevně se rozlišují aktuální a vyplněné otázky; barva neprozrazuje správnost.
+- Číselná klávesnice se otevírá při kliknutí do číselného pole. Je přesouvatelná, umožňuje mazání a zlomek s čitatelem nad vodorovnou čarou a jmenovatelem pod ní. Podporuje i běžnou klávesnici.
+- U džusu ME61182 se uznávají např. 1,25, 1.25, 5/4, 1 1/4, 10/8 i odpovídající zlomek z grafické klávesnice. Nulový nebo chybějící jmenovatel se neuznává.
+- Znak násobení je viditelný křížek ×. Obrázky šneků se přetahují na zahnutou cestičku; alternativa je vybrat šneka a kliknout na bod. Význam obou původních matematických zadání je zachován.
+- Pravítko je pouze ve cvičném kroku rad. V samotném testu není.
+- Výsledek obsahuje body z 12, procenta, motivační slovní hodnocení a dobu řešení. Dále umožňuje tisk, prohlížení odpovědí a nový pokus.
 
 ## Bodování
 
-Úlohy 1–10: každá nejvýše 1 bod. ME61256 se hodnotí podle volby Ano/Ne, textové vysvětlení nemá vliv na skóre a je dostupné při prohlížení dokončeného pokusu. U úhlů musí být správně všechny čtyři hodnocené řádky, u šneků obě značky. Poslední úloha ME61211 má dva samostatně hodnocené podúkoly za 1 bod.
+Úlohy 1–10 nejvýše po 1 bodu. ME61256 se hodnotí pouze podle Ano/Ne; vysvětlení zůstává k prohlížení. U tabulky úhlů i šneků je bod jen za všechny části správně. ME61211: část A za 1 bod a část B za 1 bod. Nevyplněné či nesprávné odpovědi mají 0 bodů. Hodnocení je motivační, nikoli oficiální škála TIMSS.
 
-11–12 bodů: Výborně!; 9–10: Velmi dobře!; 6–8: Dobře!; 3–5: Ještě trochu procvičování a půjde to lépe.; 0–2: Nevzdávej to, zkus úlohy znovu.
+Odpovědi se uchovávají při přecházení mezi otázkami v otevřeném pokusu. Obnovení nebo zavření stránky pokus vymaže. Výsledky se nikam neodesílají. Správné odpovědi jsou součástí klientského kódu; test je určen pro procvičování.
 
-## Podklady
-
-Texty a výřezy diagramů pocházejí z uživatelem dodaného dokumentu s uvolněnými úlohami TIMSS 2023 (IEA). Aplikace rekonstruuje jeho rozhraní s živými formuláři a přidává vyhodnocení. Nejde o původní testovací software TIMSS. Správné odpovědi jsou součástí klientského JavaScriptu, proto je aplikace určena k procvičování.
+Zdroj úloh: uživatelem dodané MAT_Test1_ME2.pdf, uvolněné úlohy TIMSS 2023. Podrobné uvedení zdroje je na úvodní stránce. Vlastní rozhraní neobsahuje původní loga. Šneci pocházejí ze schválených grafických návrhů.
