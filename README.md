@@ -1,4 +1,4 @@
-# Matematický test – verze 2
+# Matematický test – verze 3
 
 Celý balíček: úvodní stránka, schválené rady a 11 matematických úloh. Maximum 12 bodů. Bez přihlašování a bez shromažďování výsledků.
 
@@ -34,3 +34,9 @@ Otevřete rozbalený `index.html` ve webovém prohlížeči. Vše funguje jako s
 Odpovědi se uchovávají při přecházení mezi otázkami v otevřeném pokusu. Obnovení nebo zavření stránky pokus vymaže. Výsledky se nikam neodesílají. Správné odpovědi jsou součástí klientského kódu; test je určen pro procvičování.
 
 Zdroj úloh: uživatelem dodané MAT_Test1_ME2.pdf, uvolněné úlohy TIMSS 2023. Podrobné uvedení zdroje je na úvodní stránce. Vlastní rozhraní neobsahuje původní loga. Šneci pocházejí ze schválených grafických návrhů.
+
+## Vzhled verze 3
+
+Modré ovládací prvky v testu i radách. Úvodní stránka má jemně modré pozadí, schváleného šneka a výrazné kruhové označení Test číslo 1. Druhý test zatím není součástí balíčku.
+
+Výsledek používá kompaktní dvousloupcový přehled. Správně je označeno zeleně, Nesprávně červeně. Poslední úloha za 1 ze 2 bodů má označení Částečně správně a zvláštní značku pro části A a B. Na úlohu lze kliknout pro prohlédnutí. Na úzké obrazovce nebo při zvětšení textu je přehled jednosloupcový a může vyžadovat rolování, aby zůstal čitelný.
