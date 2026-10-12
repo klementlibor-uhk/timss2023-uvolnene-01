@@ -1,0 +1,8 @@
+@media screen {
+  .start-card h1 .grade-subtitle {display:block;font-size:23px;line-height:1.4;margin-top:8px;font-weight:600;letter-spacing:0}
+  .start-card .publication-title {font-size:22px;line-height:1.55}
+}
+@media screen and (max-width:800px) {
+  .start-card h1 .grade-subtitle {font-size:20px}
+  .start-card .publication-title {font-size:20px}
+}

@@ -1,4 +1,4 @@
-# Matematický test č. 1 – verze 6
+# Matematický test č. 1 – verze 7
 
 Rozbalte ZIP a nahrajte celý obsah do kořene repozitáře GitHub Pages. Úvod je index.html.
 Test má 11 úloh a maximum 12 bodů. Předchozí pravidla bodování zůstávají zachována.
@@ -18,3 +18,5 @@ Verze 5: přehlednější úvod, úspornější rozložení rad, značky přímo
 
 
 Verze 6: větší úvod, odpovědi v radách pod sebou, větší šneci a cestičky, výchozí prostor mimo odpovědní políčka, přesné značky a grafické vysvětlení úlohy 9.
+
+Verze 7: šneci ve vysvětlení označují správné odpovědi, odstraněny viditelné údaje o pozici, značky bez spojovacích čar, upravená hierarchie úvodu a české nezalomitelné mezery včetně dynamických textů a certifikátu.
