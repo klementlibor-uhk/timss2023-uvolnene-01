@@ -1,1 +1,1 @@
-Rady jsou součástí celého testu verze 5. Otevřete nadřazený index.html. Na konci rad lze přejít na úvod nebo spustit test. Podrobnosti jsou v nadřazeném README.md.
+Rady jsou součástí celého testu verze 6. Otevřete nadřazený index.html. Na konci rad lze přejít na úvod nebo spustit test. Podrobnosti jsou v nadřazeném README.md.
