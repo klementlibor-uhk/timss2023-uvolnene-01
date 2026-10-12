@@ -13,8 +13,8 @@
 }
 
 @media screen {
-body.diploma-preview{padding:24px;background:#eaf3fa}.diploma-preview>*:not(#certificate):not(#certificate-tools){display:none!important}#certificate-tools{max-width:182mm;margin:0 auto 20px}#certificate-tools button{margin:0 10px 10px 0}
- .diploma-preview #certificate{display:block!important;box-sizing:border-box;width:182mm;max-width:100%;height:auto;min-height:265mm;padding:13mm 12mm;border:2px solid #287bb3;border-radius:0;overflow:visible;background:white;break-inside:avoid;text-align:center}
+body.certificate-preview{padding:24px;background:#eaf3fa}.certificate-preview>*:not(#certificate):not(#certificate-tools){display:none!important}#certificate-tools{max-width:182mm;margin:0 auto 20px}#certificate-tools button{margin:0 10px 10px 0}
+ .certificate-preview #certificate{display:block!important;box-sizing:border-box;width:182mm;max-width:100%;height:auto;min-height:265mm;padding:13mm 12mm;border:2px solid #287bb3;border-radius:0;overflow:visible;background:white;break-inside:avoid;text-align:center}
  .cert-top{font-size:13pt;color:#287bb3;letter-spacing:2px;text-transform:uppercase}.cert-title{font-size:38pt;color:#185a86;margin:8mm 0 2mm;font-weight:bold}.cert-subtitle{font-size:18pt;margin:0 0 5mm}.cert-snail{width:44mm;height:35mm;object-fit:contain;margin:2mm auto}.cert-name{font-size:23pt;line-height:1.2;overflow-wrap:anywhere;max-width:150mm;margin:4mm auto 2mm;min-height:12mm}.cert-name.blank{border-bottom:1px dashed #7794ad;width:125mm}.cert-label{font-size:11pt;color:#607489}.cert-stats{display:flex;justify-content:center;gap:13mm;margin:7mm 0;padding:5mm 0;border-top:1px solid #b8d6ea;border-bottom:1px solid #b8d6ea}.cert-stats strong{display:block;font-size:25pt;color:#185a86}.cert-stats span{font-size:11pt}.cert-grade{font-size:20pt;font-weight:bold;margin:5mm 0}.cert-message{font-size:12pt;line-height:1.5;max-width:140mm;margin:4mm auto}.cert-bottom{margin-top:8mm;font-size:11pt;color:#526c82}.cert-stars{font-size:22pt;color:#cb9226;letter-spacing:10px;margin-top:6mm}
-.diploma-preview #certificate{margin:auto;box-shadow:0 8px 35px #1c507b1a}.cert-name{overflow-wrap:anywhere}
+.certificate-preview #certificate{margin:auto;box-shadow:0 8px 35px #1c507b1a}.cert-name{overflow-wrap:anywhere}
 }
