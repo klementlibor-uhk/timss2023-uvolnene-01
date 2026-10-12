@@ -1,4 +1,4 @@
-# Matematický test č. 1 – verze 5
+# Matematický test č. 1 – verze 6
 
 Rozbalte ZIP a nahrajte celý obsah do kořene repozitáře GitHub Pages. Úvod je index.html.
 Test má 11 úloh a maximum 12 bodů. Předchozí pravidla bodování zůstávají zachována.
@@ -15,3 +15,6 @@ Společné prvky pro budoucí testy: snail-track.js, keypad.js, v4.css, profile.
 
 
 Verze 5: přehlednější úvod, úspornější rozložení rad, značky přímo u bodů, šneci na levém začátku, certifikát a nové názorné vysvětlení sčítání zlomků. Bodování beze změny.
+
+
+Verze 6: větší úvod, odpovědi v radách pod sebou, větší šneci a cestičky, výchozí prostor mimo odpovědní políčka, přesné značky a grafické vysvětlení úlohy 9.
