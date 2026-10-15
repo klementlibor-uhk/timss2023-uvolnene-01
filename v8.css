@@ -83,3 +83,28 @@
   margin-right: 0;
 }
 .tutorial #content[data-step="5"] .practice-coach p {margin:0}
+
+/* Verze 13: kreslení a průvodci vedle sebe, s volným prostorem mezi nimi. */
+.tutorial .drawing-intro {display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start;margin-bottom:24px}
+.tutorial #content[data-step="5"] .drawing-intro .scroll-coach {width:100%;max-width:none;margin:0;gap:12px;padding:14px}
+.tutorial .drawing-intro-text h1 {margin-top:0}
+.tutorial #content[data-step="5"] .drawing-intro-text .lead {margin-bottom:0}
+.tutorial .drawing-practice-layout {display:grid;grid-template-columns:minmax(586px,1fr) minmax(240px,280px);gap:32px;align-items:start}
+.tutorial .drawing-practice-canvas {min-width:0}
+.tutorial .drawing-practice-canvas .drawing-board {margin:0;max-width:586px}
+.tutorial .drawing-practice-layout > .practice-coach {display:block;margin:16px 0 0;max-width:none}
+.tutorial .drawing-practice-layout > .practice-coach img {display:block;width:84px;margin:0 auto 16px}
+.tutorial .drawing-practice-layout > .practice-coach p {margin:0;line-height:1.6}
+@media screen and (max-width:1200px) {
+ .tutorial .drawing-practice-layout {grid-template-columns:minmax(0,1fr)}
+ .tutorial .drawing-practice-layout > .practice-coach {display:flex;gap:16px;max-width:460px;margin:0 0 0 auto}
+ .tutorial .drawing-practice-layout > .practice-coach img {margin:0;width:84px}
+}
+@media screen and (max-width:850px) {
+ .tutorial .drawing-intro {grid-template-columns:minmax(0,1fr);gap:24px}
+ .tutorial #content[data-step="5"] .drawing-intro .scroll-coach {max-width:460px;margin-left:auto}
+}
+@media screen and (max-width:600px) {
+ .tutorial .drawing-practice-layout > .practice-coach {display:block}
+ .tutorial .drawing-practice-layout > .practice-coach img {margin:0 auto 16px}
+}

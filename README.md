@@ -1,4 +1,4 @@
-# Matematický test 1 – verze 12
+# Matematický test 1 – verze 13
 
 Samostatná verze vycházející z testu 1 verze 7 a tréninku testu 2 verze 2.
 Otevření: index.html. Bez sestavení a bez serverového zpracování odpovědí.
@@ -20,3 +20,5 @@ Verze 10: středníky v textech pro žáky nahrazeny čárkami nebo novými vět
 Verze 11: cestička úlohy 9 má podle originálu 12 bodů. Modrý šnek patří na 11. bod a oranžový na 10. bod zleva. Opraveny kresby i text vysvětlení. Za správné umístění obou šneků je jeden bod.
 
 Verze 12: odstraněny drobné úvodní nadpisy v radách, hlavní nadpisy sjednoceny s názvy kroků. Oba průvodci kreslením jsou zarovnaní doprava a opakované šedé pokyny skryté. Odstraněn celý šedý blok pod cestičkou úlohy 9.
+
+Verze 13: v šestém kroku rad je horní šneček vedle nadpisu a dolní vedle kreslicí sítě. Dostatečné mezery, původní velikost sítě a responzivní skládání pod sebe na užších obrazovkách.
