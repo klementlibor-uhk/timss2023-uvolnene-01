@@ -1,0 +1,71 @@
+body.portfolio-preview{padding:24px;background:#eaf3fa}
+.portfolio-preview>*:not(#portfolio):not(#portfolio-tools){display:none!important}
+#portfolio-tools{max-width:210mm;margin:0 auto 20px}
+#portfolio-tools button{margin:0 10px 10px 0}
+.portfolio{display:none}
+.portfolio-preview .portfolio{display:block;background:white;color:#233148;max-width:210mm;margin:auto;padding:14mm;box-shadow:0 8px 35px #1c507b1a;font-size:14px;line-height:1.45}
+.portfolio-header{border-bottom:2px solid #287bb3;padding-bottom:14px;margin-bottom:18px}
+.portfolio h1{font-size:25px;margin:10px 0}.portfolio h2{font-size:19px;line-height:1.3;margin:0}
+.portfolio-task{border-bottom:1px solid #cedbe5;padding:15px 0 21px;break-inside:avoid;page-break-inside:avoid}
+.portfolio-task-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:12px}
+.portfolio-question p{margin:9px 0}.portfolio .original-figure{max-height:95mm;margin:12px auto}
+.portfolio .options{gap:6px;margin:12px 0}.portfolio .choice{padding:8px 10px;min-height:0;flex-wrap:wrap;gap:8px;border:1px solid #b8c6d1;cursor:default}
+.portfolio .choice>span:nth-child(3){flex:1;min-width:80px}
+.portfolio .bubble{width:25px;height:25px;flex-basis:25px;font-size:15px}
+.portfolio .multi-choice>.bubble{flex:0 0 25px;min-width:25px}
+.portfolio .multi-choice>span:nth-of-type(3){flex:1;min-width:80px}
+.portfolio-choice-mark{font-size:18px;line-height:1;min-width:18px}
+.portfolio-selected{border:2px solid #287bb3!important;background:#eff7fc}
+.portfolio-mark{font-size:12px;line-height:1.25;font-weight:bold;display:block;white-space:normal}
+.portfolio .choice>.portfolio-mark{flex-basis:100%;padding-left:43px}
+.portfolio-mark.correct{color:#226342}.portfolio-mark.incorrect{color:#a04428}.portfolio-mark.missing{color:#5c6470}
+.portfolio .answer-wrap{gap:8px;margin:12px 0}.portfolio .answer-box{min-width:72px;padding:6px 10px}
+.portfolio-number{font-weight:bold;font-size:20px;min-width:45px;text-align:center;display:block}
+.portfolio .fraction-editor{display:grid;grid-template-columns:1fr;min-width:60px;text-align:center}
+.portfolio .fraction-editor .portfolio-number:first-child{border-bottom:2px solid #233148}
+.portfolio .select-answer{gap:5px}.portfolio-dropdown{padding:6px 10px;border:1px solid #91abc0;border-radius:5px;display:inline-block;font-weight:bold}
+.portfolio .table-scroll{overflow:visible}
+.portfolio .shape-table{min-width:0;table-layout:fixed}
+.portfolio .shape-table th:first-child{width:30%}
+.portfolio .shape-table th,.portfolio .shape-table td,.portfolio .animal-table th,.portfolio .animal-table td,.portfolio .game-table th,.portfolio .game-table td{padding:6px;font-size:12px}
+.portfolio .matrix-choice{padding:2px;gap:3px;cursor:default}
+.portfolio .shape-table .bubble{width:21px;height:21px;flex-basis:21px;font-size:13px}
+.portfolio .animal-table th img{width:45px;height:45px}
+.portfolio .animal-table .answer-box{width:70px;min-width:60px}
+.portfolio .animal-table .answer-wrap{flex-direction:column;align-items:center;gap:3px}
+.portfolio .tile-rows{gap:12px;margin:14px 0}
+.portfolio .tile-row{font-size:18px;gap:10px}
+.portfolio .tile-drop{min-width:85px;min-height:65px;font-size:25px}
+.portfolio .tile-drop .portfolio-mark{margin:5px 4px;font-size:11px}
+.portfolio .drawing-board{max-width:110mm;margin:12px auto}
+.portfolio .drawing-area{min-width:0}.portfolio-grid-note{font-size:12px;color:#355c77}
+.portfolio-source{font-size:10px;color:#5f6c78;margin-top:18px}
+@media screen and (max-width:900px){
+ .practice-demo{grid-template-columns:1fr}.practice-demo .practice-coach{display:flex}
+ .result-numbers strong{font-size:36px}
+}
+@media screen and (max-width:600px){
+ .simple-card-board .tile-pool,.practice-tile-targets{grid-template-columns:repeat(3,minmax(52px,80px));gap:10px;width:100%}
+ .practice-tile-targets .tile-drop{width:100%;min-width:52px;min-height:80px}
+ .simple-card-board .tile-card,.simple-card-board .tile-placeholder{height:80px}
+ .practice-coach img{width:70px}.practice-coach p{font-size:15px;padding:12px}
+ .result-numbers{gap:20px}.result-numbers strong{font-size:34px}
+ .portfolio-preview .portfolio{padding:20px 14px}
+ .portfolio-task-head{flex-direction:column;gap:7px}
+ .portfolio .table-scroll{overflow:auto}
+}
+@media print{
+ @page{size:A4 portrait;margin:14mm}
+ body.portfolio-preview{padding:0!important;background:white!important}
+ body.portfolio-preview>*:not(#portfolio){display:none!important}
+ body.portfolio-preview>#portfolio{display:block!important;max-width:none;width:auto;margin:0;padding:0;box-shadow:none;min-height:0;overflow:visible;font-size:11pt;line-height:1.35}
+ body.portfolio-preview>#certificate{display:none!important}
+ .portfolio h1{font-size:19pt}.portfolio h2{font-size:14pt}
+ .portfolio-task-head{break-after:avoid}.portfolio .choice,.portfolio tr,.portfolio .answer-wrap{break-inside:avoid}
+ .portfolio .status{font-size:9pt;white-space:normal}
+ .portfolio .original-figure{max-height:82mm}.portfolio .drawing-board{max-width:95mm}
+ .portfolio .table-scroll{overflow:visible}
+ .portfolio .portfolio-mark{display:block!important}
+ .portfolio .bubble{border-width:1px}.portfolio-selected{border-color:#233148!important}
+ .portfolio *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}

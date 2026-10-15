@@ -1,0 +1,66 @@
+/* Version 8: readable hierarchy, common tutorial and static portfolio. */
+.question-header{margin-bottom:26px}
+.result-numbers{display:flex;align-items:center;gap:52px;text-align:center}
+.result-numbers strong{display:block;color:#287bb3;white-space:nowrap;line-height:1.15}
+.result-numbers .score-points strong{font-size:48px}
+.result-numbers .score-percent strong{font-size:28px}
+.result-numbers span{display:block;font-size:14px;color:#55687a;margin-top:6px}
+.result-time{text-align:right;color:#55687a;margin:8px 0 14px}
+.cert-stats{gap:24mm;align-items:center}
+.cert-stats>div:first-child strong{font-size:30pt}
+.cert-stats>div:last-child strong{font-size:21pt}
+.portfolio .portfolio-name{font-size:23px;margin:20px 0;overflow-wrap:anywhere}
+.portfolio .portfolio-task{break-inside:auto;page-break-inside:auto}
+.portfolio .portfolio-task-head{break-after:avoid}
+.portfolio .portfolio-question{break-before:avoid}
+.portfolio .figure{max-width:100%;max-height:75mm}
+.portfolio .angle-layout{display:block}
+.portfolio .angles{width:140px;margin:12px 0}
+.portfolio .angle-table{font-size:12px;table-layout:fixed;break-inside:avoid}
+.portfolio .angle-table th,.portfolio .angle-table td{padding:4px}
+.portfolio .angle-table .choice{display:flex;justify-content:center;padding:5px;min-height:0}
+.portfolio .angle-table .choice>.portfolio-mark{padding-left:0}
+.portfolio .nets{max-width:none;display:grid;grid-template-columns:1fr;gap:8px}
+.portfolio .nets .choice{break-inside:avoid}
+.portfolio .nets img{width:160px}
+.portfolio .snail-task-layout{display:block}
+.portfolio .snail-track{min-width:0;max-width:100%;break-inside:avoid}
+.portfolio .track-snail{display:block;opacity:1;padding:0;background:transparent;border:0}
+.portfolio .track-snail img{display:block;margin:auto}
+.portfolio .portfolio-written{white-space:pre-wrap;border:1px solid #c5d4e2;border-radius:6px;padding:12px;overflow-wrap:anywhere}
+.portfolio .portfolio-number{white-space:pre-wrap;overflow-wrap:anywhere}
+.portfolio .answer-wrap{break-inside:avoid}
+.portfolio .snail-task-board{min-width:0}
+.privacy-footer{display:flex;justify-content:flex-end;margin-top:14px}
+.privacy-link{display:inline-flex;align-items:center;gap:7px;border:0;background:none;color:#315f80;font:inherit;font-size:13px;padding:8px 0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.privacy-link svg{width:20px;height:20px}
+#privacy-dialog,#exit-dialog{width:min(560px,calc(100% - 32px));max-height:85vh;overflow:auto;line-height:1.6}
+#privacy-dialog h2,#exit-dialog h2{font-size:24px;color:#185a86;padding-right:20px}
+.dialog-x{position:absolute;top:10px;right:12px;border:0;background:none;font-size:27px;color:#315f80;cursor:pointer}
+#exit-dialog .row{margin-top:28px;gap:14px;display:flex;flex-wrap:wrap}
+.tutorial #content .tutorial-finish-actions{margin-top:38px;padding-top:12px;gap:16px;display:flex;flex-wrap:wrap}
+.tutorial #content .tutorial-finish-actions>*{padding:13px 18px}
+.tutorial .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.2;font-size:26px;margin:0 8px}
+.tutorial .frac>span:first-child{border-bottom:2px solid;padding-bottom:3px}
+.tutorial .frac>span:last-child{padding-top:3px}
+.tutorial .fraction-task{font-size:22px}
+.tutorial #content[data-step="3"] .exercise{max-width:none}
+.tutorial #content .fraction-icon{display:inline-flex;vertical-align:middle;margin:0 5px}
+.calculation{padding:12px 20px;background:#f0f8fe;border-radius:12px;font-size:22px}
+.calculation p{line-height:1.6}
+@media(max-width:650px){
+ .result-numbers{gap:34px}.result-numbers .score-points strong{font-size:40px}.result-numbers .score-percent strong{font-size:25px}
+ .result-time{text-align:left}.cert-stats{gap:12mm}
+ .portfolio .nets{grid-template-columns:1fr}
+ .tutorial #content .tutorial-finish-actions{flex-direction:column;align-items:stretch}
+}
+@media print{
+ body.portfolio-preview #portfolio{display:block!important;overflow:visible!important}
+ .portfolio .portfolio-name{font-size:17pt}
+ .portfolio .figure,.portfolio .snail-track{break-inside:avoid}
+ .portfolio .portfolio-task{margin-bottom:7mm}
+ .portfolio .nets{grid-template-columns:1fr}
+ .cert-stats{gap:24mm}
+ .cert-stats>div:first-child strong{font-size:30pt}
+ .cert-stats>div:last-child strong{font-size:21pt}
+}
