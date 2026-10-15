@@ -1,4 +1,4 @@
-# Matematický test 1 – verze 9
+# Matematický test 1 – verze 10
 
 Samostatná verze vycházející z testu 1 verze 7 a tréninku testu 2 verze 2.
 Otevření: index.html. Bez sestavení a bez serverového zpracování odpovědí.
@@ -14,3 +14,5 @@ se skutečným nastavením hostitelského webu.
 
 
 Verze 9: šneček ve všech radách, upozornění na rolování jen při obsahu pod obrazovkou, opravené SVG souřadnice cestičky a výukových obrázků, označení obrázkový diagram.
+
+Verze 10: středníky v textech pro žáky nahrazeny čárkami nebo novými větami. Bodování a ovládání beze změny.
