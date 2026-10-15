@@ -73,3 +73,13 @@
  .cert-stats>div:first-child strong{font-size:30pt}
  .cert-stats>div:last-child strong{font-size:21pt}
 }
+
+/* Verze 12: stručnější rady, oba průvodci kreslením zarovnaní doprava. */
+.tutorial #content[data-step="5"] .scroll-coach,
+.tutorial #content[data-step="5"] .exercise > .practice-coach {
+  width: min(100%, 460px);
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.tutorial #content[data-step="5"] .practice-coach p {margin:0}
