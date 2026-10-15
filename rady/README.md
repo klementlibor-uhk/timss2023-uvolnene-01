@@ -1,1 +1,1 @@
-Rady jsou součástí celého testu verze 6. Otevřete nadřazený index.html. Na konci rad lze přejít na úvod nebo spustit test. Podrobnosti jsou v nadřazeném README.md.
+Rady pro vyplnění testu 1, verze 9. Průvodcem je šneček. U delších stránek se zobrazí upozornění na posunutí dolů. Otevřete nadřazený index.html.
