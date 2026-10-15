@@ -25,9 +25,17 @@
     // would make the page jump when the pupil reaches the bottom.
     let coachHeight = 0;
     if (coach && !coach.hidden) {
-      const style = getComputedStyle(coach);
-      coachHeight = coach.getBoundingClientRect().height
-        + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+      const intro = coach.closest('.drawing-intro');
+      if (intro) {
+        // Only the height added to the shared heading row matters. On narrow
+        // screens this also includes the gap above the stacked coach.
+        coachHeight = Math.max(0, intro.getBoundingClientRect().height
+          - intro.querySelector('.drawing-intro-text').getBoundingClientRect().height);
+      } else {
+        const style = getComputedStyle(coach);
+        coachHeight = coach.getBoundingClientRect().height
+          + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+      }
     }
     const end = footer.getBoundingClientRect().bottom;
     needsScroll = end + window.scrollY - coachHeight > window.innerHeight + 12;
