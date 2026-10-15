@@ -1,4 +1,13 @@
 /* Version 8: readable hierarchy, common tutorial and static portfolio. */
+/* Version 9: a scroll lesson without reducing the drawing area. */
+.tutorial .scroll-coach{display:flex;align-items:center;gap:16px;padding:12px 18px;margin:16px 0;border:2px solid #81b7d8;border-radius:14px;background:#eef8ff;max-width:640px}
+.tutorial .scroll-coach[hidden],.tutorial .scroll-cue[hidden]{display:none}
+.tutorial .scroll-coach img{width:76px;height:64px;object-fit:contain;flex-shrink:0}
+.tutorial .scroll-coach p{margin:0;font-size:17px;line-height:1.5}
+.tutorial .scroll-cue{position:fixed;right:20px;bottom:12px;z-index:15;background:#185f8c;color:#fff;border:2px solid #fff;border-radius:24px;padding:10px 18px;font:700 16px Arial,sans-serif;box-shadow:0 3px 14px #16395440;cursor:pointer}
+.tutorial .scroll-cue:focus-visible{outline:3px solid #e5a121;outline-offset:3px}
+@media(max-width:650px){.tutorial .scroll-coach{gap:10px;padding:10px}.tutorial .scroll-coach img{width:56px;height:52px}.tutorial .scroll-coach p{font-size:16px}}
+@media print{.scroll-cue,.scroll-coach{display:none!important}}
 .question-header{margin-bottom:26px}
 .result-numbers{display:flex;align-items:center;gap:52px;text-align:center}
 .result-numbers strong{display:block;color:#287bb3;white-space:nowrap;line-height:1.15}

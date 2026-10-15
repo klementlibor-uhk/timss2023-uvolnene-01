@@ -1,4 +1,4 @@
-# Matematický test 1 – verze 8
+# Matematický test 1 – verze 9
 
 Samostatná verze vycházející z testu 1 verze 7 a tréninku testu 2 verze 2.
 Otevření: index.html. Bez sestavení a bez serverového zpracování odpovědí.
@@ -10,4 +10,7 @@ odstranění napovídajících nadpisů; nová vysvětlení; úprava výsledků 
 informace o soukromí. Žádné odesílání jmen ani výsledků.
 
 Před konečným nasazením na kvalitniskola.cz sladit informaci o soukromí
-se skutečným nastavením hostitelského webu. Verze není automaticky publikována.
+se skutečným nastavením hostitelského webu.
+
+
+Verze 9: šneček ve všech radách, upozornění na rolování jen při obsahu pod obrazovkou, opravené SVG souřadnice cestičky a výukových obrázků, označení obrázkový diagram.
