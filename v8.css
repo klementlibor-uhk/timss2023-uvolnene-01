@@ -108,3 +108,7 @@
  .tutorial .drawing-practice-layout > .practice-coach {display:block}
  .tutorial .drawing-practice-layout > .practice-coach img {margin:0 auto 16px}
 }
+
+/* Verze 14: průhledné ilustrace a oddělení zadání šneků. */
+.animal-choice .practice-animal{display:block;width:84px;height:58px;overflow:visible}
+#question[data-page="8"] .snail-instructions p+p{margin-top:38px!important}

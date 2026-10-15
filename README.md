@@ -1,4 +1,4 @@
-# Matematický test 1 – verze 13
+# Matematický test 1 – verze 14
 
 Samostatná verze vycházející z testu 1 verze 7 a tréninku testu 2 verze 2.
 Otevření: index.html. Bez sestavení a bez serverového zpracování odpovědí.
@@ -22,3 +22,5 @@ Verze 11: cestička úlohy 9 má podle originálu 12 bodů. Modrý šnek patří
 Verze 12: odstraněny drobné úvodní nadpisy v radách, hlavní nadpisy sjednoceny s názvy kroků. Oba průvodci kreslením jsou zarovnaní doprava a opakované šedé pokyny skryté. Odstraněn celý šedý blok pod cestičkou úlohy 9.
 
 Verze 13: v šestém kroku rad je horní šneček vedle nadpisu a dolní vedle kreslicí sítě. Dostatečné mezery, původní velikost sítě a responzivní skládání pod sebe na užších obrazovkách.
+
+Verze 14: nové průhledné SVG ilustrace zvířat v osmém kroku rad. Větší mezera mezi zadáním A a B v úloze 9.
