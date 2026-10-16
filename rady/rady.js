@@ -7,7 +7,7 @@ let activeInput=null;
 const fractionIcon='<span class="fraction-icon" aria-hidden="true"><span></span><i></i><span></span></span>';
 function numberField(key,label='Odpověď:',unit='') {
   const m=state.numbers[key];
-  return `<div class="answer-wrap" data-label="${escapeHTML(label)}" data-unit="${escapeHTML(unit)}"><span id="${key}-label">${label}</span><div class="answer-box">${m.mode==='plain'?`<input id="${key}-value" data-model="${key}" data-part="value" aria-labelledby="${key}-label" type="text" inputmode="numeric" data-integer="true" pattern="[0-9]*" autocomplete="off" maxlength="32" value="${escapeHTML(m.value)}">`:`<div class="fraction-editor"><input id="${key}-num" data-model="${key}" data-part="num" aria-label="Čitatel zlomku" type="text" inputmode="numeric" data-integer="true" pattern="[0-9]*" maxlength="12" value="${escapeHTML(m.num)}"><input id="${key}-den" data-model="${key}" data-part="den" aria-label="Jmenovatel zlomku" type="text" inputmode="numeric" data-integer="true" pattern="[0-9]*" maxlength="12" value="${escapeHTML(m.den)}"></div>`}</div></div>`;
+  return `<div class="answer-wrap" data-label="${escapeHTML(label)}" data-unit="${escapeHTML(unit)}"><span id="${key}-label">${label}</span><div class="answer-box">${m.mode==='plain'?`<input id="${key}-value" data-model="${key}" data-part="value" aria-labelledby="${key}-label" type="text" inputmode="decimal" autocomplete="off" maxlength="32" value="${escapeHTML(m.value)}">`:`<div class="fraction-editor"><input id="${key}-num" data-model="${key}" data-part="num" aria-label="Čitatel zlomku" type="text" inputmode="numeric" data-integer="true" pattern="[0-9]*" maxlength="12" value="${escapeHTML(m.num)}"><input id="${key}-den" data-model="${key}" data-part="den" aria-label="Jmenovatel zlomku" type="text" inputmode="numeric" data-integer="true" pattern="[0-9]*" maxlength="12" value="${escapeHTML(m.den)}"></div>`}</div></div>`;
 }
 function clearFeedback(){delete state.feedback[state.step];state.done.delete(state.step);const el=$('#feedback');if(el)el.textContent='';renderSteps();}
 function feedbackMarkup(){const f=state.feedback[state.step];return `<p id="feedback" class="feedback ${f&&!f.ok?'error':''}" role="status">${f?escapeHTML(f.text):''}</p>`;}
@@ -34,29 +34,3 @@ function navigate(i){if(i<0||i>=names.length||i>state.unlocked)return;closePad()
 function render(focus=true){
   $('#content').dataset.step=state.step;renderSteps();$('#content').innerHTML=pages[state.step]();
   $('#back').disabled=state.step===0;$('#next').hidden=state.step===8;$('#next').textContent=state.step===7?'Dokončit rady →':'Další krok →';
-  $('#pad-toggle').disabled=![2,3].includes(state.step);bindPage();if(focus){$('#content').focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
-}
-$('#back').onclick=()=>navigate(state.step-1);
-$('#next').onclick=()=>{if(state.step===0)state.done.add(0);if(state.step<8){state.unlocked=Math.max(state.unlocked,state.step+1);navigate(state.step+1);}};
-function bindPage(){
-  bindNumberFields();
-  $('#content').querySelectorAll('input[name="practice-choice"]').forEach(el=>el.onchange=()=>{state.choice=el.value;clearFeedback();});
-  $('#content').querySelectorAll('input[name="practice-multi"]').forEach(el=>el.onchange=()=>{state.multi=[...$('#content').querySelectorAll('input[name="practice-multi"]:checked')].map(x=>x.value);clearFeedback();});
-  const menu=$('#practice-days');if(menu)menu.onchange=()=>{state.days=menu.value;clearFeedback();};
-  if(state.step===4)CardTiles.bind($('[data-card-board]'),{values:[1,2,3],rows:practiceRows,simple:true,get:()=>state.tiles,onchange:slots=>{state.tiles=slots;clearFeedback();}});
-  if(state.step===5)GridDrawing.bind($('[data-drawing-board]'),{get:()=>state.drawing,onchange:edges=>{state.drawing=edges;clearFeedback();}});
-  const check=$('#check');
-  if(check)check.onclick=()=>{
-    closePad();let ok=false,text='';
-    if(state.step===1){ok=state.choice==='60';text=ok?'Správně! Jedna hodina má 60 minut.':'Zkus to znovu. Jedna hodina má 60 minut.';}
-    if(state.step===2){const m=state.numbers.practiceNumber;ok=TIMSS.number(m.mode==='plain'?m.value:`${m.num}/${m.den}`)===24;text=ok?'Správně, napsal/a jsi 24.':'Zkontroluj číslice. Máš napsat číslo 24.';}
-    if(state.step===4){ok=state.tiles.every(v=>['1','2','3'].includes(v))&&new Set(state.tiles).size===3;text=ok?'Výborně! Přesunul/a jsi všechny tři čtverečky do rámečků.':'Přesuň všechny tři čtverečky do spodních rámečků. Na jejich pořadí nezáleží.';}
-    if(state.step===5){ok=state.drawing.length>0;text=ok?'Výborně! Čáru už umíš nakreslit. Může vést kterýmkoli směrem po linkách sítě. Vyzkoušej si také gumu a tlačítko Začít znovu.':'Nejprve zapni Kreslit a vyzkoušej si nakreslit čáru po linkách sítě.';}
-    if(state.step===6){ok=state.days==='7';text=ok?'Správně! Jeden týden má 7 dní.':'Zkus to znovu. Jeden týden má 7 dní.';}
-    if(state.step===7){ok=state.multi.length===2&&state.multi.includes('camel')&&state.multi.includes('deer');text=ok?'Správně! Čtyři nohy mají velbloud a jelen.':'Čtyři nohy mají velbloud a jelen. Označ oba a ostatní zvířata nech neoznačená.';}
-    if(state.step===3){const m=state.numbers.practiceFraction;ok=m.mode==='fraction'&&TIMSS.number(`${m.num}/${m.den}`)===0.75;text=ok?'Správně, napsal/a jsi tři čtvrtiny.':'Klikni na tlačítko zlomku. Nahoře napiš 3 a dole 4.';}
-    updateFeedback(ok,text);
-  };
-  if($('#repeat'))$('#repeat').onclick=()=>navigate(0);
-}
-window.addEventListener('DOMContentLoaded',()=>render(false));
