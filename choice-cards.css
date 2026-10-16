@@ -1,0 +1,20 @@
+/* Answer cards keep native selection and keyboard controls without a visible widget. */
+:is(.choice,.matrix-choice,.animal-choice){position:relative}
+:is(.choice,.matrix-choice,.animal-choice)>input:is([type="radio"],[type="checkbox"]){
+  position:absolute;
+  top:0;
+  left:0;
+  width:1px;
+  height:1px;
+  margin:0;
+  padding:0;
+  border:0;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+:is(.choice,.matrix-choice,.animal-choice):has(>input:is(:checked,:focus-visible)){
+  outline:none;
+  box-shadow:none;
+}
